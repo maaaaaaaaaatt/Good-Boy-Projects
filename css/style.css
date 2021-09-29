@@ -1,0 +1,159 @@
+@font-face {
+   font-family: "Batmip";
+   src: url("batmip.woff2");
+}
+
+body {
+   margin: 0 1.5%;
+   font-family: sans-serif;
+   line-height: 1.4em;
+   width: 95vw;
+   height: 100vh;
+   background-color: #f1c40e;
+   color: white;
+   font-family: 'Work Sans', system-ui, sans-serif;
+}
+
+/* Header */
+
+.timecontainer {
+   width: 50%;
+   height: 5%;
+}
+
+#time {
+   position: absolute;
+   width: 50%;
+   padding: 20px 0px;
+   font-size: 18pt;
+}
+
+
+/* Footer Links */
+
+.footer {
+   position: absolute;
+   display: flex;
+   width: 95%;
+   font-size: 24pt;
+   bottom: 1%;
+   color: white;
+}
+
+.footerlinks {
+   list-style: none;
+   padding: 0%;
+   margin: 2% 0%;
+   flex: 1;
+   width: 75%;
+   line-height: 1.25;
+}
+
+.footerlinks li {
+   width: inherit;
+   font-style: italic;
+   font-size: 22pt;
+   cursor: pointer;
+}
+
+.footerlinks li:hover {
+   width: inherit;
+   font-style: normal;
+   text-decoration: underline;
+}
+
+.social {
+   margin-top: 10px;
+}
+
+
+
+/* Side Bars */
+.sidebar {
+   position: absolute;
+   width: 3%;
+   height: inherit;
+   right: 0%;
+   top: 0%;
+   display: inline-block;
+   transition: width .2s;
+   border-left: 2px solid white;
+   text-align: center;
+   overflow: hidden;
+   z-index: 1;
+}
+
+#projectsbar {
+   right: 0%;
+}
+
+#infobar {
+   right: 3%;
+}
+
+#barlabel {
+   position: absolute;
+   top: 45%;
+   writing-mode: vertical-rl;
+   z-index: 1;
+   left: 8px;
+   transform: rotate(deg);
+   cursor: pointer;
+   font-size: 14pt;
+}
+
+#barlabel:hover {
+   text-decoration: underline;
+}
+
+.closebtn {
+   position: absolute;
+   top: 1%;
+   right: 13px;
+   font-size: 36px;
+   margin-left: 50px;
+   display: none;
+   cursor: pointer;
+}
+
+/* Projects */
+
+.projectsgrid {
+   padding: 20px 20px 20px 60px;
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   gap: 20px;
+   grid-auto-rows: minmax(100px, auto);
+}
+
+#date {
+   margin-bottom: 10px;
+}
+
+.projectsimage {
+   position: relative;
+   width: 100%;
+}
+
+#projectsimage {
+   width: 100%;
+   filter: blur(0px);
+   transition: filter .1s;
+}
+
+#projectsscore {
+   position: absolute;
+   padding: 10px;
+   top: 0px;
+   height: 100%;
+   visibility: hidden;
+}
+
+.projectsimage:hover #projectsscore {
+   visibility: visible;
+   transition: visibility .2s;
+}
+
+.projectsimage:hover #projectsimage {
+   filter: blur(20px);
+}
