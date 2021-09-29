@@ -1,6 +1,5 @@
-@font-face {
-   font-family: "Batmip";
-   src: url("batmip.woff2");
+:root {
+   --goodboyyellow: #ffd900;
 }
 
 body {
@@ -9,7 +8,7 @@ body {
    line-height: 1.4em;
    width: 95vw;
    height: 100vh;
-   background-color: #f1c40e;
+   background-color: var(--goodboyyellow);
    color: white;
    font-family: 'Work Sans', system-ui, sans-serif;
 }
@@ -28,6 +27,18 @@ body {
    font-size: 18pt;
 }
 
+/* Center Object */
+.center {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.center img {
+   width: 500px;
+   height: 500px;
+}
 
 /* Footer Links */
 
@@ -37,7 +48,6 @@ body {
    width: 95%;
    font-size: 24pt;
    bottom: 1%;
-   color: white;
 }
 
 .footerlinks {
@@ -50,7 +60,7 @@ body {
 }
 
 .footerlinks li {
-   width: inherit;
+   width: fit-content;
    font-style: italic;
    font-size: 22pt;
    cursor: pointer;
@@ -66,17 +76,25 @@ body {
    margin-top: 10px;
 }
 
+svg {
+   fill: white;
+}
+
+svg:hover {
+   fill: black;
+}
+
 
 
 /* Side Bars */
 .sidebar {
    position: absolute;
-   width: 3%;
+   width: 45px;
    height: inherit;
    right: 0%;
    top: 0%;
    display: inline-block;
-   transition: width .2s;
+   transition: width .5s;
    border-left: 2px solid white;
    text-align: center;
    overflow: hidden;
@@ -104,6 +122,7 @@ body {
 
 #barlabel:hover {
    text-decoration: underline;
+   color: black;
 }
 
 .closebtn {
@@ -116,18 +135,24 @@ body {
    cursor: pointer;
 }
 
+.closebtn:hover {
+   color: black;
+}
+
 /* Projects */
 
 .projectsgrid {
-   padding: 20px 20px 20px 60px;
+   padding: 20px 50px 20px 60px;
    display: grid;
    grid-template-columns: repeat(1, 1fr);
-   gap: 20px;
+   gap: 90px;
    grid-auto-rows: minmax(100px, auto);
 }
 
-#date {
-   margin-bottom: 10px;
+#title {
+   margin-bottom: 20px;
+   font-size: 25pt;
+   font-style: italic;
 }
 
 .projectsimage {
@@ -136,24 +161,44 @@ body {
 }
 
 #projectsimage {
-   width: 100%;
-   filter: blur(0px);
+   width: 50%;
    transition: filter .1s;
 }
 
-#projectsscore {
+#projectsinfo {
    position: absolute;
-   padding: 10px;
-   top: 0px;
+   padding: 20% 15%;
+   top: 0%;
    height: 100%;
    visibility: hidden;
+   font-size: 32pt;
+   line-height: normal;
 }
 
-.projectsimage:hover #projectsscore {
+#projectsinfo mark {
+   background-color: var(--goodboyyellow);
+   color: white;
+}
+
+.projectsimage:hover #projectsinfo {
    visibility: visible;
    transition: visibility .2s;
 }
 
 .projectsimage:hover #projectsimage {
-   filter: blur(20px);
+   filter: blur(5px);
+}
+
+/* Mobile, baby! */
+@media only screen and (max-width: 600px) {
+   .center img {
+      max-width: 250px;
+      height: auto;
+   }
+}
+
+@media only screen and (max-width: 400px) {
+   .sidebar {
+      display: none;
+   }
 }

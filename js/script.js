@@ -17,7 +17,7 @@ setInterval(updateCurrentTime, 1000);
 
 
 function openProjects() {
-   document.getElementById("projectsbar").style.width = "50%";
+   document.getElementById("projectsbar").style.width = "75%";
    document.getElementById("projectsbar").style.overflowY = "scroll";
    document.getElementById("barlabel").style.transform = "rotate(180deg)";
    document.getElementById("closebtn").style.display = "inherit";
