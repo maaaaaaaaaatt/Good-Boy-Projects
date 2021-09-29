@@ -99,6 +99,7 @@ svg:hover {
    text-align: center;
    overflow: hidden;
    z-index: 1;
+   background-color: var(--goodboyyellow);
 }
 
 #projectsbar {
@@ -161,18 +162,21 @@ svg:hover {
 }
 
 #projectsimage {
-   width: 50%;
+   width: 75%;
    transition: filter .1s;
 }
 
 #projectsinfo {
-   position: absolute;
-   padding: 20% 15%;
-   top: 0%;
+
    height: 100%;
    visibility: hidden;
    font-size: 32pt;
    line-height: normal;
+
+   position: absolute;
+   left: 50%;
+   top: 75%;
+   transform: translate(-50%, -50%);
 }
 
 #projectsinfo mark {
