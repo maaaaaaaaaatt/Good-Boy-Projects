@@ -1,0 +1,382 @@
+@font-face {
+   font-family: "Batmip";
+   src: url("batmip.woff2");
+}
+
+body {
+   margin: 0 2.5%;
+   font-family: sans-serif;
+   line-height: 1.4em;
+   width: 95vw;
+   height: 100vh;
+   background-color: yellow;
+   color: black;
+}
+
+/* Now Playing */
+
+.nowplayingcontainer {
+   width: 95%;
+   height: 5%;
+}
+
+.nowplaying {
+   position: absolute;
+   width: 50%;
+   padding: 10px 5px;
+   font-size: 18pt;
+}
+
+.ticker-wrap {
+   width: 100%;
+   padding-left: 100%;
+}
+
+@keyframes ticker {
+   0% {
+      transform: translate3d(0, 0, 0);
+   }
+
+   100% {
+      transform: translate3d(-100%, 0, 0);
+   }
+}
+
+.ticker-move {
+   display: inline-block;
+   white-space: nowrap;
+   padding-right: 100%;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-name: ticker;
+   animation-duration: 50s;
+}
+
+.ticker-move:hover {
+   animation-play-state: paused;
+   cursor: help;
+}
+
+.ticker-item {
+   display: inline-block;
+   padding: .3rem 15rem;
+}
+
+/* Footer Links */
+
+.footer {
+   position: absolute;
+   display: flex;
+   width: 95%;
+   font-size: 24pt;
+   bottom: 1%;
+   line-height: 30px;
+   color: black;
+}
+
+.footerlinks {
+   list-style: none;
+   padding: 0%;
+   margin: 2% 0%;
+   flex: 1;
+   width: 75%;
+}
+
+.footerlinks li {
+   width: inherit;
+}
+
+.weather {
+   display: inline-block;
+   position: absolute;
+   margin: 2% 0%;
+   right: 0%;
+   bottom: 0%;
+   width: 20%;
+}
+
+/* score */
+
+.scorecontainer {
+   position: absolute;
+   width: 3%;
+   height: 95%;
+   display: inline-block;
+   overflow: hidden;
+   transition: width .2s;
+   background-color: yellow;
+   z-index: 1;
+   overflow: scroll;
+}
+
+#scoreinput {
+   padding: 20px 20px 20px 60px;
+   font-size: 1.9em;
+   line-height: 1.3em;
+}
+
+#scorelabel {
+   position: absolute;
+   top: 47.5%;
+   writing-mode: vertical-rl;
+   z-index: 1;
+   left: 8px;
+   transform: rotate(deg);
+   cursor: pointer;
+}
+
+.buttoncontainer {
+   position: absolute;
+   display: inline;
+   padding-left: 40px;
+   bottom: 20px;
+   font-size: 1em;
+}
+
+.button {
+   display: inline;
+   margin-right: 10px;
+}
+
+.button:hover {
+   filter: blur(4px);
+}
+
+@keyframes blink {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+#scoreinput::after {
+   content: "|";
+   font-size: 1.2em;
+   animation: blink infinite 0.7s;
+}
+
+/* archive */
+
+.archivecontainer {
+   position: absolute;
+   border-left: 1px solid #70543e;
+   border-right: 1px solid #70543e;
+   left: 3%;
+   width: 3%;
+   height: 95%;
+   display: inline-block;
+   overflow: scroll;
+   transition: width .2s;
+   background-color: white;
+   z-index: 1;
+}
+
+.archivegrid {
+   padding: 20px 20px 20px 60px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   grid-auto-rows: minmax(100px, auto);
+}
+
+#date {
+   margin-bottom: 10px;
+}
+
+.archiveimage {
+   position: relative;
+   width: 100%;
+}
+
+#archiveimage {
+   width: 100%;
+   filter: blur(0px);
+   transition: filter .1s;
+}
+
+#archivescore {
+   position: absolute;
+   padding: 10px;
+   top: 0px;
+   height: 100%;
+   visibility: hidden;
+}
+
+.archiveimage:hover #archivescore {
+   visibility: visible;
+   transition: visibility .2s;
+}
+
+.archiveimage:hover #archiveimage {
+   filter: blur(20px);
+}
+
+#archivelabel {
+   position: absolute;
+   top: 47%;
+   writing-mode: vertical-lr;
+   z-index: 2;
+   left: 8px;
+   transform: rotate(180deg);
+   cursor: pointer;
+}
+
+/* live */
+
+.livecontainer {
+   position: absolute;
+   left: 6%;
+   width: 3%;
+   height: 95%;
+   display: inline-block;
+   overflow: hidden;
+   border-right: 1px solid #70543e;
+   border-left: 1px solid #70543e;
+   transition: width .2s;
+   background-color: white;
+   color: white;
+   z-index: 1;
+   overflow: hidden;
+}
+
+#closed {
+   position: absolute;
+   display: inline;
+   padding: 20px 20px 20px 60px;
+   width: calc(100% - 80px);
+   height: calc(100% - 40px);
+   z-index: 1;
+   top: 0px;
+   visibility: visible;
+}
+
+#stream {
+   position: absolute;
+   width: calc(100% - 80px);
+   height: calc(100% - 40px);
+   padding: 20px 20px 20px 60px;
+   visibility: hidden;
+}
+
+#schedulecontainer {
+   display: block;
+}
+
+table,
+th,
+td {
+   position: relative;
+   top: 20px;
+   text-align: left;
+   left: 10px;
+   width: calc(94% - 120px);
+   height: 96%;
+   margin: auto;
+   padding: 30px;
+   z-index: 2;
+   border-spacing: 10px;
+   border: 1px dashed white;
+   border-collapse: collapse;
+   color: white;
+}
+
+#scheduleintro {
+   position: relative;
+   top: 20px;
+   padding: 20px 20px 20px 60px;
+   text-align: center;
+   z-index: 2;
+}
+
+#livelabel {
+   position: absolute;
+   top: 49%;
+   writing-mode: vertical-lr;
+   z-index: 3;
+   left: 8px;
+   transform: rotate(180deg);
+   cursor: pointer;
+   color: #70543e;
+}
+
+/* introduction */
+
+.introcontainer {
+   position: absolute;
+   left: 9%;
+   width: 91%;
+   height: 95%;
+   display: inline-block;
+   overflow: hidden;
+   transition: width .2s;
+   visibility: visible;
+}
+
+#introtext {
+   position: relative;
+   font-size: 1.9em;
+   line-height: 1.2em;
+   text-align: center;
+   margin: auto;
+   top: 38%;
+   padding: 60px;
+}
+
+#introtext a {
+   text-decoration: none;
+   color: #70543e;
+}
+
+.welcomelink {
+   border-bottom: .5px dashed #70543e;
+   cursor: pointer;
+}
+
+/* media queries */
+
+@media print {
+
+   .tickercontainer {
+      display: none;
+   }
+
+   .livecontainer {
+      display: none;
+   }
+
+   .archivecontainer {
+      display: none;
+   }
+
+   .introcontainer {
+      display: none;
+   }
+
+   .buttoncontainer {
+      display: none;
+   }
+
+   #scorelabel {
+      display: none;
+   }
+
+   #scoreinput {
+      font-size: 25px;
+   }
+
+   #scoreinput::after {
+      display: none;
+   }
+
+   header,
+   footer,
+   aside,
+   form,
+   â€¦ {
+      display: none;
+   }
+
+}
