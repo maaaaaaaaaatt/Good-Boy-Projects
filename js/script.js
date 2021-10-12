@@ -16,7 +16,7 @@ setInterval(updateCurrentTime, 1000);
 
 	async function fetchData() {
 
-		const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=imperial&q=Atlanta&APPID=a767027338c3e647bc664f0b09493eb2`)
+		const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=imperial&q=Atlanta&APPID=ea6ad50f9ceadd89f4bb64fce0f1f9aa`)
 		.then(res => res.json())
 
 		// pulling temperature and weather conditions from JSON
