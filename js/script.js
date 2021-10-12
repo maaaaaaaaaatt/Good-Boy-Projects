@@ -11,6 +11,23 @@ function updateCurrentTime() {
 
 setInterval(updateCurrentTime, 1000);
 
+//Weather
+
+
+	async function fetchData() {
+
+		const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=imperial&q=Atlanta&APPID=a767027338c3e647bc664f0b09493eb2`)
+		.then(res => res.json())
+
+		// pulling temperature and weather conditions from JSON
+		const description = res.weather[0].description
+		const temperature = Math.round(res.main.temp)
+		document.getElementById('description').innerHTML = description;
+		document.getElementById('temperature').innerHTML = temperature;
+	}
+
+	fetchData()
+
 
 //Expand
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */

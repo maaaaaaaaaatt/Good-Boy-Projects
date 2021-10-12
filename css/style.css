@@ -10,6 +10,7 @@ body {
    background-color: var(--goodboyyellow);
    color: white;
    font-family: 'Work Sans', system-ui, sans-serif;
+   font-size: 18pt;
 }
 
 /* Header */
@@ -19,8 +20,10 @@ body {
    height: 5%;
 }
 
-#time {
-   position: absolute;
+#time,
+#temperature,
+#description {
+   position: relative;
    width: 50%;
    padding: 20px 0px;
    font-size: 18pt;
