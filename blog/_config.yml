@@ -16,6 +16,8 @@ permalink: pretty
 
 baseurl: ""
 
+remote_theme: ronv/sidey
+
 highlighter: none
 
 exclude:
@@ -32,7 +34,8 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-sitemap  
+  - jekyll-sitemap
+  - jekyll-include-cache
 
 collections:
   pages:
