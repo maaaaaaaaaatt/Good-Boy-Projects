@@ -273,11 +273,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages (~> 219)
-  jekyll
-  jekyll-paginate
-  jekyll-seo-tag
-  jekyll-sitemap
+  github-pages
+  minima
 
 BUNDLED WITH
    1.17.2
