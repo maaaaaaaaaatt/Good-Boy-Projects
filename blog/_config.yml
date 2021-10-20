@@ -14,7 +14,9 @@ author:
   url: #yoururl
 permalink: pretty
 
-baseurl: ""
+baseurl: "/blog"
+production_url : http://maaaaaaaaaatt.github.io.com/good-boy-projects/blog
+BASE_PATH : http://maaaaaaaaaatt.github.io.com/good-boy-projects/blog
 
 highlighter: none
 
