@@ -12,8 +12,6 @@ function updateCurrentTime() {
 setInterval(updateCurrentTime, 1000);
 
 //Weather
-
-
 	async function fetchData() {
 
 		const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=imperial&q=Atlanta&APPID=ea6ad50f9ceadd89f4bb64fce0f1f9aa`)
@@ -49,3 +47,11 @@ function openProjects() {
  }
  
 
+// Show Info Card
+function toggle_info_card(id) {
+   var divelement = document.getElementById(id);
+   if(divelement.style.display == 'none')
+     divelement.style.display = 'block';
+   else
+     divelement.style.display = 'none';
+ }
