@@ -1,0 +1,148 @@
+:root {
+   --goodboyyellow: #ffd900;
+}
+
+body {
+   --fontSize: .875em;
+   --lineHeight: calc(var(--fontSize) * 1.6);
+   display: grid;
+   background-color: var(--goodboyyellow);
+   line-height: var(--lineHeight);
+   font-size: var(--fontSize);
+   font-family: 'Work Sans', system-ui, sans-serif;
+   margin: auto;
+   padding: 5vh 5vw 5vh 5vw
+}
+
+p {
+   margin: calc(var(--fontSize) * 1.6) 0
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+a:visited {
+   text-decoration-line: line-through red;
+}
+
+li {
+   list-style: square;
+}
+
+h2 {
+   font-weight: normal;
+   line-height: normal;
+   font-size: 22pt;
+   text-decoration: underline;
+}
+
+img {
+   width: 100%;
+   height: auto;
+}
+
+.caption {
+   font-size: 14pt;
+   text-align: center;
+   text-decoration: underline;
+}
+
+
+@media only screen and (min-width: 600px) {
+   body {
+      --grid-tc: repeat(8, 1fr);
+      --grid-ce: -1;
+      --fontSize: calc(100vw / 80);
+      grid-template-columns: var(--grid-tc);
+      grid-column-gap: var(--lineHeight)
+   }
+
+   cell[span^="1"] {
+      --grid-cs: 1
+   }
+
+   cell[span^="2"] {
+      --grid-cs: 2
+   }
+
+   cell[span^="3"] {
+      --grid-cs: 3
+   }
+
+   cell[span^="4"] {
+      --grid-cs: 4
+   }
+
+   cell[span^="5"] {
+      --grid-cs: 5
+   }
+
+   cell[span^="6"] {
+      --grid-cs: 6
+   }
+
+   cell[span^="7"] {
+      --grid-cs: 7
+   }
+
+   cell[span^="8"] {
+      --grid-cs: 8
+   }
+
+   cell[span="1"] {
+      --grid-ce: 1
+   }
+
+   cell[span$="-1"],
+   cell[span="2"] {
+      --grid-ce: 2
+   }
+
+   cell[span$="-2"],
+   cell[span="3"] {
+      --grid-ce: 3
+   }
+
+   cell[span$="-3"],
+   cell[span="4"] {
+      --grid-ce: 4
+   }
+
+   cell[span$="-4"],
+   cell[span="5"] {
+      --grid-ce: 5
+   }
+
+   cell[span$="-5"],
+   cell[span="6"] {
+      --grid-ce: 6
+   }
+
+   cell[span$="-6"],
+   cell[span="7"] {
+      --grid-ce: 7
+   }
+
+   cell[span$="-7"],
+   cell[span="8"] {
+      --grid-ce: 8
+   }
+
+   cell[span] {
+      grid-column-end: span var(--grid-ce)
+   }
+
+   cell[span*="-"] {
+      grid-column-start: var(--grid-cs)
+   }
+
+   cell[span*="-"] {
+      grid-column-end: var(--grid-ce)
+   }
+}
