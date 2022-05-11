@@ -54,21 +54,23 @@ a:hover {
 }
 
 #officehours {
-   text-decoration:underline;
-   font-style: italic;   
+   text-decoration: underline;
+   font-style: italic;
 
-   animation: blink 2s steps(1, end) infinite;
- }
- 
- @keyframes blink {
+   animation: blink 2.5s steps(1, end) infinite;
+}
+
+@keyframes blink {
    0% {
-     opacity: 1;
+      opacity: 1;
    }
+
    50% {
-     opacity: 0;
+      opacity: 0;
    }
+
    100% {
-     opacity: 1;
+      opacity: 1;
    }
 }
 
