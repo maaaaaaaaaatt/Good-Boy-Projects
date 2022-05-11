@@ -21,7 +21,7 @@ function officeHours() {
 
   if (hrs < 9 || day.getDay() == 0 || day.getDay() == 6)
     greet = ' CLOSED';
-  else if (hrs >= 9 && hrs <= 17)
+  else if (hrs >= 9 && hrs <= 16)
     greet = ' OPEN';
   else if (hrs >= 17 && hrs <= 24)
     greet = 'CLOSED';

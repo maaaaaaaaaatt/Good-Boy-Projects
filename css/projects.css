@@ -1,0 +1,134 @@
+:root {
+   --goodboyyellow: #ffd900;
+}
+
+body {
+   margin: 0 1.5%;
+   line-height: 1.4em;
+   width: 95vw;
+   height: 100vh;
+   background-color: var(--goodboyyellow);
+   color: white;
+   font-family: 'Work Sans', system-ui, sans-serif;
+   font-size: 18pt;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+/* Footer Links */
+
+.topnav {
+   position: relative;
+   width: 95%;
+   height: fit-content;
+   font-size: 24pt;
+   margin: 1rem 0rem 1rem 0rem;
+}
+
+.topnavlinks {
+   list-style: none;
+   line-height: 1.25;
+}
+
+.topnavlinks li {
+   width: fit-content;
+   font-style: italic;
+   font-size: 18pt;
+   cursor: pointer;
+}
+
+.topnavlinks li:hover {
+   width: inherit;
+   font-style: normal;
+   text-decoration: underline;
+}
+
+.topnav a {
+   color: white;
+   text-decoration: none;
+}
+
+.topnav a:visited {
+   color: white;
+}
+
+/* Projects */
+
+.container {  
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-auto-rows: minmax(100px, auto);
+   gap: auto 0px;
+   grid-auto-flow: row;
+ }
+ 
+
+.info_card {
+   position: relative;
+   margin: 2rem;
+   width: 90%;
+   height: fit-content;
+   background-color: white;
+   color: black;
+   border: 4px solid black;
+   box-shadow: 15px 15px black;
+   text-align: center;
+}
+
+.info_card h2 {
+   padding: 0% 3%;
+   margin: 1rem 0rem 0rem 0rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.subtitle {
+   font-size: 16pt;
+   margin-bottom: 0.5;
+   font-style: italic;
+}
+
+.info_card p {
+   padding: 0% 3%;
+   text-align: justify;
+   text-justify: auto;
+}
+
+.info_card a {
+   color: black;
+   font-style: italic;
+}
+
+.info_card a:hover {
+   color: black;
+   font-style: normal;
+   background-color: var(--goodboyyellow);
+}
+
+.projectsimage {
+   position: relative;
+   width: 100%;
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+#projectsimage {
+   width: 75%;
+   transition: filter .1s;
+}
+
+.projectsimage:hover #projectsinfo {
+   visibility: visible;
+   transition: visibility .2s;
+}
+
+.projectsimage:hover #projectsimage {
+   filter: blur(5px);
+}
