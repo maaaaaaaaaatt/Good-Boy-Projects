@@ -37,6 +37,11 @@ a:hover {
 .timecontainer {
    width: 50%;
    height: 5%;
+   margin-top: 15px;
+}
+
+.weathercontainer {
+   margin-top: 10px;
 }
 
 #time,
@@ -44,8 +49,27 @@ a:hover {
 #description {
    position: relative;
    width: 50%;
-   padding: 20px 0px;
+   margin: 20px 0px;
    font-size: 18pt;
+}
+
+#officehours {
+   text-decoration:underline;
+   font-style: italic;   
+
+   animation: blink 2s steps(1, end) infinite;
+ }
+ 
+ @keyframes blink {
+   0% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
 }
 
 /* Center Object */

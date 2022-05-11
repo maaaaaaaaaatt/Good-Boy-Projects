@@ -7,9 +7,27 @@ function getTimeCurrentTime() {
 function updateCurrentTime() {
    let timeNode = document.getElementById('time');
    timeNode.innerHTML = getTimeCurrentTime();
+   officeHours();
 }
 
 setInterval(updateCurrentTime, 1000);
+
+function officeHours() {
+  var myDate = new Date();
+  var hrs = myDate.getHours();
+
+  var greet;
+
+  if (hrs < 9)
+      greet = ' CLOSED';
+  else if (hrs >= 9 && hrs <= 17)
+      greet = ' OPEN';
+  else if (hrs >= 17 && hrs <= 24)
+      greet = 'CLOSED';
+
+      document.getElementById('officehours').innerHTML = greet;
+}
+
 
 //Weather
 	async function fetchData() {
@@ -55,3 +73,6 @@ function toggle_info_card(id) {
    else
      divelement.style.display = 'none';
  }
+
+ // Office Hours
+ 
