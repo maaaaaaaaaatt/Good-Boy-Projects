@@ -2,6 +2,16 @@
    --goodboyyellow: #ffd900;
 }
 
+@font-face {
+   font-family: Playground;
+   src: url(../PPPlayground-Regular.ttf);
+ }
+
+ @font-face {
+   font-family: Neue Montreal;
+   src: url(../PPNeueMontrealMono-Regular.woff);
+ }
+
 body {
    --fontSize: .875em;
    --lineHeight: calc(var(--fontSize) * 1.6);
@@ -9,13 +19,13 @@ body {
    background-color: var(--goodboyyellow);
    line-height: var(--lineHeight);
    font-size: var(--fontSize);
-   font-family: 'Work Sans', system-ui, sans-serif;
+   font-family: 'Neue Montreal', system-ui, sans-serif;
    margin: auto;
    padding: 5vh 5vw 5vh 5vw
 }
 
 p {
-   margin: calc(var(--fontSize) * 1.6) 0
+   line-height: normal;
 }
 
 a {
@@ -51,6 +61,37 @@ img {
    font-size: 14pt;
    text-align: center;
    text-decoration: underline;
+}
+
+/* Header */
+
+#time,
+#temperature,
+#description {
+   position: relative;
+   width: 50%;
+   margin: 20px 0px;
+}
+
+#officehours {
+   text-decoration: underline;
+   font-style: italic;
+
+   animation: blink 2.5s steps(1, end) infinite;
+}
+
+@keyframes blink {
+   0% {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
 }
 
 /* Footnotes! */
