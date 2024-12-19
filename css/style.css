@@ -21,6 +21,7 @@ body {
 
 a {
    text-decoration: underline;
+   color: black;
 }
 
 a:hover {
@@ -107,11 +108,13 @@ table {
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
+   z-index: -99;
 }
 
 .center img {
    width: 500px;
    height: 500px;
+   opacity: 10%;
 }
 
 /* Footer Links */
@@ -120,7 +123,7 @@ table {
    text-align: center;
    position: fixed;
    bottom: 1%;
-   left: 45%;
+   left: 46%;
 }
 
 .footerlinks {
@@ -129,11 +132,3 @@ table {
 
 
 /* Blog */
-
-.notebook {
-   margin: 10% 0% 10% 15%;
-}
-
-.notebook ul {
-   list-style: square;
-}

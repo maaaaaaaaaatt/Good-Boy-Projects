@@ -44,35 +44,3 @@ async function fetchData() {
 }
 
 fetchData()
-
-
-//Expand
-/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-
-
-function openProjects() {
-  document.getElementById("projectsbar").style.width = "75%";
-  document.getElementById("projectsbar").style.overflowY = "scroll";
-  document.getElementById("barlabel").style.transform = "rotate(180deg)";
-  document.getElementById("closebtn").style.display = "inherit";
-}
-
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-function closeProjects() {
-  document.getElementById("projectsbar").style.width = "3%";
-  document.getElementById("projectsbar").style.overflowY = "hidden";
-  document.getElementById("barlabel").style.transform = "rotate(0deg)";
-  document.getElementById("closebtn").style.display = "none";
-}
-
-
-// Show Info Card
-function toggle_info_card(id) {
-  var divelement = document.getElementById(id);
-  if (divelement.style.display == 'none')
-    divelement.style.display = 'block';
-  else
-    divelement.style.display = 'none';
-}
-
-// Office Hours
