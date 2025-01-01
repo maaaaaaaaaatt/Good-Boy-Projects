@@ -120,14 +120,9 @@ table {
 /* Footer Links */
 
 .footer {
-   text-align: center;
+   text-align: left;
+   bottom: 2%;
    position: fixed;
-   bottom: 1%;
-   left: 46%;
-}
-
-.footerlinks {
-   list-style: none;
 }
 
 
