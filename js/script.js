@@ -52,8 +52,7 @@ function copyrightDate() {
 
 // Last Modified
 
-function lastModified() {
-  document.getElementById("last-modified").textContent =
-    "Last Modified: " + document.lastModified;
+function loadTime() {
+  document.getElementById("timestamp").innerHTML = document.lastModified;
 }
 

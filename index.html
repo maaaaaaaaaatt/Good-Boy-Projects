@@ -120,10 +120,13 @@
       <span>Courtesy of Good Boy Projects, <span id="copyright">
             <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
       </span><br>
-      <span id="lastModified"><script> document.getElementById("last-modified").textContent =
-    "Last Modified: " + document.lastModified;</script></span>
+      <span>Last Modified: <span id="timestamp"></span></span>
    </div>
 
 </body>
+
+<script>
+  document.getElementById("timestamp").innerHTML = document.lastModified;
+</script>
 
 </html>
