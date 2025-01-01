@@ -8,12 +8,17 @@
    src: url(../PPNeueMontrealMono-Regular.woff);
  }
 
+ @font-face {
+   font-family: Berkeley Mono;
+   src: url(../TX-02-Trial-Regular.otf);
+ }
+
 body {
    margin: 0 1.5%;
    line-height: 1.4em;
    background-color: #ffd900;
    color: black;
-   font-family: 'Neue Montreal', system-ui, sans-serif;
+   font-family: 'Berkeley Mono', system-ui, sans-serif;
    font-size: 10pt;
    align-items: center;
    text-align: center;

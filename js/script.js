@@ -44,3 +44,16 @@ async function fetchData() {
 }
 
 fetchData()
+
+// Courtesy of Date controller
+function copyrightDate() {
+  document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+}
+
+// Last Modified
+
+function lastModified() {
+  document.getElementById("last-modified").textContent =
+    "Last Modified: " + document.lastModified;
+}
+
