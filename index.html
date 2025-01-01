@@ -116,10 +116,8 @@
 
    <div class="footer">
       <span><a href="notebook.html">Notebook</a></span><br>
-      <span><a href="mailto:info@matthew-flores.com?subject=Let's Make Something Fun Together!">Contact</a></span><br>
-      <span>Courtesy of Good Boy Projects, <span id="copyright">
-            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-      </span><br>
+      <span><a href="mailto:studio@goodboyprojects.net?subject=Let's Make Something Fun Together!">Contact</a></span><br>
+      <span>Courtesy of Good Boy Projects, <span id="copyright"></span><br>
       <span>Last Modified: <span id="timestamp"></span></span>
    </div>
 
@@ -128,5 +126,7 @@
 <script>
   document.getElementById("timestamp").innerHTML = document.lastModified;
 </script>
+
+<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
 
 </html>
