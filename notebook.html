@@ -54,6 +54,10 @@
       <span>We Are: </span><span id="officehours"></span>
    </div>
 
+   <div class="center">
+      <img src="/images/dog.gif">
+   </div>
+
    <table>
       <thead>
          <tr>
@@ -81,13 +85,14 @@
       </tbody>
    </table>
 
-<div class="footer">
-      <span><a href="mailto:studio@goodboyprojects.net?subject=Let's Make Something Fun Together!">Contact</a></span> |
-      <span><a href="notebook.html">Notebook</a></span> | <span><a href="index.html">Home</a></span><br>
+   <div class="footer">
+      <span><a href="index.html">Index</a></span> |
+      <span><a href="notebook.html">Notebook</a></span> | 
+      <span><a href="mailto:studio@goodboyprojects.net?subject=Let's Make Something Fun Together!">Contact</a></span>
+      <br>
       <span>Courtesy of Good Boy Projects, <span id="copyright"></span><br>
          <span>Last Modified: <span id="timestamp"></span></span><br>
          <button id="toggle-style-button">Play Ball!</button>
-
    </div>
 
    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="0" height="0">
@@ -115,7 +120,7 @@
 
       if (isGreen) {
          // Switch back to original colors
-         document.body.style.backgroundColor = 'white';
+         document.body.style.backgroundColor = '#ffd900';
          document.body.style.color = 'black';
          document.querySelectorAll('a').forEach(link => {
             link.style.color = 'black';

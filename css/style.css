@@ -1,3 +1,7 @@
+:root {
+   --goodboyyellow: #ffd900;
+}
+
 @font-face {
    font-family: Playground;
    src: url(../PPPlayground-Regular.ttf);
@@ -16,7 +20,7 @@
 body {
    margin: 0 1.5%;
    line-height: 1.4em;
-   background-color: white;
+   background-color: var(--goodboyyellow);
    color: black;
    font-family: 'Berkeley Mono', system-ui, sans-serif;
    font-size: 10pt;

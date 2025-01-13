@@ -56,3 +56,43 @@ function loadTime() {
   document.getElementById("timestamp").innerHTML = document.lastModified;
 }
 
+// Play Ball!
+
+function playBall() {
+  const toggleButton = document.getElementById('toggle-style-button');
+
+  toggleButton.addEventListener('click', function () {
+     const isGreen = document.body.style.backgroundColor === 'green';
+
+     if (isGreen) {
+        // Switch back to original colors
+        document.body.style.backgroundColor = '#ffd900';
+        document.body.style.color = 'black';
+        document.querySelectorAll('a').forEach(link => {
+           link.style.color = 'black';
+        });
+        document.querySelectorAll('table').forEach(table => {
+              table.style.border = '1px solid black';
+           });
+           document.querySelectorAll('th, td').forEach(cell => {
+              cell.style.border = '1px solid black';
+           });
+
+     } else {
+        // Switch to green background and white text
+        document.body.style.backgroundColor = 'green';
+        document.body.style.color = 'white';
+        document.querySelectorAll('a').forEach(link => {
+           link.style.color = 'white';
+           // Change table borders to white
+           document.querySelectorAll('table').forEach(table => {
+              table.style.border = '1px solid white';
+           });
+           document.querySelectorAll('th, td').forEach(cell => {
+              cell.style.border = '1px solid white';
+           });
+        });
+     }
+  });
+
+}
