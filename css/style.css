@@ -128,10 +128,13 @@ th {
 /* Footer Links */
 
 .footer {
-   position: fixed;
-   text-align: left;
+   position: relative;
    bottom: 5%;
 }
+
+button {
+   cursor: pointer;
+ }
 
 
 /* Blog */
