@@ -1,17 +1,17 @@
 @font-face {
    font-family: Playground;
    src: url(../PPPlayground-Regular.ttf);
- }
+}
 
- @font-face {
+@font-face {
    font-family: Neue Montreal;
    src: url(../PPNeueMontrealMono-Regular.woff);
- }
+}
 
- @font-face {
+@font-face {
    font-family: Berkeley Mono;
    src: url(../TX-02-Trial-Regular.otf);
- }
+}
 
 body {
    margin: 0 1.5%;
@@ -22,6 +22,8 @@ body {
    font-size: 10pt;
    align-items: center;
    text-align: center;
+   filter: url("#distort");
+   -webkit-filter: url("#distort");
 }
 
 a {
@@ -86,26 +88,27 @@ a:visited {
 }
 
 .intro {
-text-align: center;
+   text-align: center;
 }
 
 /* Center Object */
 table {
-      width: 100%;
-      margin: 25px auto;
-      border-spacing: 0;
-      border-collapse: collapse;
-  }
+   width: 100%;
+   margin: 25px auto;
+   border-spacing: 0;
+   border-collapse: collapse;
+}
 
-  th, td {
-      border: 1px solid black;
-      padding: 10px;
-      text-align: center;
-  }
+th,
+td {
+   border: 1px solid black;
+   padding: 10px;
+   text-align: center;
+}
 
-  th {
-      font-weight: bold;
-  }
+th {
+   font-weight: bold;
+}
 
 
 .center {
@@ -125,9 +128,9 @@ table {
 /* Footer Links */
 
 .footer {
-   text-align: left;
-   bottom: 2%;
    position: fixed;
+   text-align: left;
+   bottom: 5%;
 }
 
 
